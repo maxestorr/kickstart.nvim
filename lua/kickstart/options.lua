@@ -1,4 +1,5 @@
 -- options.lua
+--
 -- Changing Neovim's option settings
 
 -- [[ Setting options ]]
