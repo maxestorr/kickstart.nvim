@@ -6,39 +6,46 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
--- Set highlight on search
-vim.o.hlsearch = false
+local options = {
+  -- Set highlight on search
+  hlsearch = false,
 
--- Make line numbers default
-vim.wo.number = true
+  -- Make line numbers default
+  number = true,
+  relativenumber = true,
 
--- Enable mouse mode
-vim.o.mouse = 'a'
+  -- Enable mouse mode
+  mouse = 'a',
 
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+  -- Sync clipboard between OS and Ne
+  --  Remove this option if you want your OS clipboard to remain independent.
+  --  See `:help 'clipboard'`
+  clipboard = 'unnamedplus',
 
--- Enable break indent
-vim.o.breakindent = true
+  -- Enable break indent
+  breakindent = true,
 
--- Save undo history
-vim.o.undofile = true
+  -- Save undo history
+  undofile = true,
 
--- Case-insensitive searching UNLESS \C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+  -- Case-insensitive searching UNLESS \C or capital in search
+  ignorecase = true,
+  smartcase = true,
 
--- Keep signcolumn on by default
-vim.wo.signcolumn = 'yes'
+  -- Keep signcolumn on by default
+  signcolumn = 'yes',
 
--- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+  -- Decrease update time
+  updatetime = 250,
+  timeoutlen = 300,
 
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+  -- Set completeopt to have a better completion experience
+  completeopt = 'menuone,noselect',
 
--- NOTE: You should make sure your terminal supports this
-vim.o.termguicolors = true
+  -- NOTE: You should make sure your terminal supports this
+  termguicolors = true,
+}
+
+for option, value in pairs(options) do
+  vim.opt[option] = value
+end
